@@ -1,0 +1,70 @@
+.section {
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.logo {
+  width: 15rem;
+  margin-left: 1rem;
+}
+.nav {
+  display: flex;
+}
+
+.ul {
+  display: flex;
+}
+.li {
+  list-style: none;
+  margin-inline: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.li:hover {
+  color: gray;
+}
+.button {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .logo {
+    width: 10rem;
+  }
+  .section {
+    height: 5rem;
+  }
+  .nav {
+    height: 100vh;
+    position: fixed;
+    inset: 0 0 0 30%;
+    background-color: rgb(240, 240, 240, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.2s ease-out;
+  }
+  .ul {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5rem;
+  }
+  .button {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    aspect-ratio: 1;
+    border: none;
+    background-image: url("../menu_hambgr.svg");
+    background-repeat: no-repeat;
+    z-index: 999;
+  }
+  .button[aria-expanded="true"] {
+    background-image: url("../close.svg");
+  }
+}
