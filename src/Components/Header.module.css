@@ -62,11 +62,11 @@
     width: 2rem;
     aspect-ratio: 1;
     border: none;
-    background-image: url("../menu_hambgr.svg");
+    background-image: url("../img/menu_hambgr.svg");
     background-repeat: no-repeat;
     z-index: 999;
   }
   .button[aria-expanded="true"] {
-    background-image: url("../close.svg");
+    background-image: url("../img/close.svg");
   }
 }

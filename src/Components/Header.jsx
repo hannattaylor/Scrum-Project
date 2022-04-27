@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../scrum_logo.svg";
+import logo from "../img/scrum_logo.svg";
 import styles from "./Header.module.css";
 
 export default function Header() {
