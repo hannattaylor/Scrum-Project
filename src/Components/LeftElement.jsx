@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./LeftEl.module.css";
 
 export default function LeftElement(props) {
-  console.log(props.img);
   function createTag(scrumEl) {
     return { __html: scrumEl };
   }

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./RightEl.module.css";
 
 export default function RightElement(props) {
-  console.log(props.img);
   function createTag(scrumEl) {
     return { __html: scrumEl };
   }

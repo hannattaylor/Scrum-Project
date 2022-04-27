@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../scrum_logo.svg";
 import styles from "./Header.module.css";
 
@@ -24,12 +25,17 @@ export default function Header() {
         style={{ transform: toggle ? "translateX(0%)" : "translateX(100%)" }}
       >
         <ul className={styles.ul}>
-          <li id="why" className={styles.li}>
-            VARFÖR SCRUM?
-          </li>
-          <li d="koncept" className={styles.li}>
-            SCRUM KONCEPT
-          </li>
+          <Link to="/">
+            <li id="why" className={styles.li}>
+              VARFÖR SCRUM?
+            </li>
+          </Link>
+          <Link to="/roller">
+            {/* <-- detta ska ändras sen, till dropdown*/}
+            <li d="koncept" className={styles.li}>
+              SCRUM KONCEPT
+            </li>
+          </Link>
           <li d="test" className={styles.li}>
             GÖR SCRUM-TEST
           </li>

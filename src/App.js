@@ -1,31 +1,25 @@
 import "./App.css";
-import scrumJson from "./scrum.json";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Start from "./pages/Start";
+import Roller from "./pages/Roller";
+import Artefakter from "./pages/Artefakter";
+import Aktiviteter from "./pages/Aktiviteter";
+import AgilEstimering from "./pages/AgilEstimering";
 import Header from "./Components/Header";
-import RightElement from "./Components/RightElement";
-import LeftElement from "./Components/LeftElement";
-import teamwork from "./undraw_teamwork_hpdk.svg";
-import team from "./undraw_project_team_lc5a.svg";
 
 function App() {
-  let scrum = scrumJson;
-
   return (
     <main>
-      <Header></Header>
-      <section></section>
-
-      <RightElement
-        id="about"
-        title="Om Scrum"
-        props={scrum.about}
-        img={teamwork}
-      ></RightElement>
-      <LeftElement
-        id="history"
-        title="Bakgrund"
-        props={scrum.history}
-        img={team}
-      ></LeftElement>
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Start />} />
+          <Route path="/roller" element={<Roller />} />
+          <Route path="/artefakter" element={<Artefakter />} />
+          <Route path="/aktiviteter" element={<Aktiviteter />} />
+          <Route path="/agil-estimering" element={<AgilEstimering />} />
+        </Routes>
+      </Router>
     </main>
   );
 }
