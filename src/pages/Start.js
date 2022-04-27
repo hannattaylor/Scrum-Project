@@ -1,13 +1,12 @@
 import React from "react";
 import RightElement from "../Components/RightElement";
 import LeftElement from "../Components/LeftElement";
-import teamwork from "../img/undraw_teamwork_hpdk.svg";
-import team from "../img/undraw_project_team_lc5a.svg";
 import scrumJson from "../scrum.json";
 import styles from "./Start.module.css";
+
+import teamwork from "../img/undraw_teamwork_hpdk.svg";
+import rugbyBall from "../img/rugby_ball.svg";
 import scrumBoard from "../img/scrum_board.svg";
-import SmallElement from "../Components/SmallElement";
-import backlog from "../img/Backlog.svg";
 
 export default function Start() {
   let scrum = scrumJson;
@@ -16,28 +15,22 @@ export default function Start() {
       <section className={styles.section}>
         <img className={styles.img} src={scrumBoard}></img>
         <section>
-          <h2 className={styles.h2}>Vad är Scrum?</h2>
-          <h2 className={styles.h2Sub}>Agil utvecklig.</h2>
+          <h2 className={styles.h2}>Varför Scrum?</h2>
+          <h2 className={styles.h2Sub}>För att det är bäst.</h2>
         </section>
       </section>
-      <RightElement
+      <LeftElement
         id="about"
         title="Om Scrum"
         props={scrum.about}
         img={teamwork}
-      ></RightElement>
-      <LeftElement
+      ></LeftElement>
+      <RightElement
         id="history"
         title="Bakgrund"
         props={scrum.history}
-        img={team}
-      ></LeftElement>
-      <SmallElement
-        id="backlog"
-        title="Backlog"
-        props={scrum.artefacts.backlog}
-        img={backlog}
-      ></SmallElement>
+        img={rugbyBall}
+      ></RightElement>
     </main>
   );
 }

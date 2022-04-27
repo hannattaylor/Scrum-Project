@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  align-items: center;
+}
+.section {
+  width: 70%;
+  margin-bottom: 2%;
+}
+.elWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.h3 {
+  font-size: 2.6rem;
+  margin-bottom: 0;
+}
+.p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 750px) {
+  .h3 {
+    font-size: 2rem;
+  }
+  .p {
+    font-size: 1.3rem;
+  }
+}
