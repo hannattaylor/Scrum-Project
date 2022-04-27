@@ -1,20 +1,31 @@
 import "./App.css";
 import scrumJson from "./scrum.json";
 import Header from "./Components/Header";
+import RightElement from "./Components/RightElement";
+import LeftElement from "./Components/LeftElement";
+import teamwork from "./undraw_teamwork_hpdk.svg";
+import team from "./undraw_project_team_lc5a.svg";
 
 function App() {
   let scrum = scrumJson;
 
-  //Funktion för att returnera JSON property som innerHTML i valda element- för att kunna klicka sig fram på sidan //
-  function createTag(scrumEl) {
-    return { __html: scrumEl };
-  }
-
-  //<p id="about" dangerouslySetInnerHTML={createTag(scrum.about)}></p>
-
   return (
     <main>
       <Header></Header>
+      <section></section>
+
+      <RightElement
+        id="about"
+        title="Om Scrum"
+        props={scrum.about}
+        img={teamwork}
+      ></RightElement>
+      <LeftElement
+        id="history"
+        title="Bakgrund"
+        props={scrum.history}
+        img={team}
+      ></LeftElement>
     </main>
   );
 }
