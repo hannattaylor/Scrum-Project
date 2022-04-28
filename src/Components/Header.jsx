@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/scrum_logo.svg";
@@ -9,15 +10,17 @@ export default function Header() {
 
   const toggleFunction = () => setToggle(!toggle);
 
+  useEffect(() => {
+    if (window.innerWidth >= 750) {
+      setToggle(true);
+    } else {
+      setToggle(false);
+    }
+  });
+
   return (
-    <section className={styles.section}>
+    <section id="section" className={styles.section}>
       <img className={styles.logo} src={logo}></img>
-      <button
-        id="button"
-        aria-expanded={toggle}
-        className={styles.button}
-        onClick={toggleFunction}
-      ></button>
       <nav
         className={styles.nav}
         style={{ transform: toggle ? "translateX(0%)" : "translateX(100%)" }}
@@ -62,11 +65,17 @@ export default function Header() {
             </ul>
           </li>
 
-          <li d="test" className={styles.li}>
+          <li id="test" className={styles.li}>
             GÖR SCRUM-TEST
           </li>
         </ul>
       </nav>
+      <button
+        id="button"
+        aria-expanded={toggle}
+        className={styles.button}
+        onClick={toggleFunction}
+      ></button>
     </section>
   );
 }
