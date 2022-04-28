@@ -1,11 +1,12 @@
 .section {
   width: 100%;
-  height: 50vh;
+  height: auto;
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   gap: 2rem;
   align-items: center;
+  margin-block: 2rem;
 }
 
 .rightSide {

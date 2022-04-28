@@ -16,7 +16,9 @@ export default function Start() {
         <img className={styles.img} src={scrumBoard}></img>
         <section>
           <h2 className={styles.h2}>Varför Scrum?</h2>
-          <h2 className={styles.h2Sub}>För att det är bäst.</h2>
+          <h2 className={styles.h2Sub}>
+            För att bidra till ökat teamwork och nå uppsatta mål mer effektivt.
+          </h2>
         </section>
       </section>
       <LeftElement

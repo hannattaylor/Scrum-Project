@@ -7,16 +7,15 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [style, setStyle] = useState({ display: "none" });
+  const [innerWidth] = useState([window.innerWidth]);
 
   const toggleFunction = () => setToggle(!toggle);
 
   useEffect(() => {
     if (window.innerWidth >= 750) {
-      setToggle(true);
-    } else {
-      setToggle(false);
+      setToggle(!toggle);
     }
-  });
+  }, innerWidth);
 
   return (
     <section id="section" className={styles.section}>
