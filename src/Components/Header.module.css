@@ -18,7 +18,9 @@
 
 .ul {
   display: flex;
+  height: 100%;
 }
+
 .li {
   list-style: none;
   margin-inline: 1rem;
@@ -31,6 +33,26 @@
 }
 .button {
   display: none;
+}
+
+.dropdown {
+  display: none;
+  width: 15rem;
+  position: absolute;
+  background-color: rgb(236, 236, 236);
+  padding: 0;
+  list-style-type: none;
+}
+
+.dropLi {
+  inset-inline: 0;
+  list-style: none;
+  text-align: left;
+  padding: 1rem;
+}
+.dropLi:hover {
+  background-color: #6c63ff;
+  color: white;
 }
 
 @media (max-width: 750px) {

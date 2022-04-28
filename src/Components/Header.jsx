@@ -5,11 +5,9 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
+  const [style, setStyle] = useState({ display: "none" });
 
-  const toggleFunction = () => {
-    setToggle(!toggle);
-  };
+  const toggleFunction = () => setToggle(!toggle);
 
   return (
     <section className={styles.section}>
@@ -30,12 +28,40 @@ export default function Header() {
               VARFÖR SCRUM?
             </li>
           </Link>
-          <Link to="/roller">
-            {/* <-- detta ska ändras sen, till dropdown*/}
-            <li d="koncept" className={styles.li}>
-              SCRUM KONCEPT
-            </li>
-          </Link>
+
+          <li
+            onMouseEnter={() => {
+              setStyle({ display: "block" });
+            }}
+            onMouseLeave={() => {
+              setStyle({ display: "none" });
+            }}
+            id="koncept"
+            className={styles.li}
+          >
+            SCRUM KONCEPT
+            <ul
+              onMouseLeave={() => {
+                setStyle({ display: "none" });
+              }}
+              style={style}
+              className={styles.dropdown}
+            >
+              <Link to="/roller">
+                <li className={styles.dropLi}>Roller</li>
+              </Link>
+              <Link to="/aktiviteter">
+                <li className={styles.dropLi}>Aktiviteter</li>
+              </Link>
+              <Link to="/artefakter">
+                <li className={styles.dropLi}>Artefakter</li>
+              </Link>
+              <Link to="/agil-estimering">
+                <li className={styles.dropLi}>Agil Estimering</li>
+              </Link>
+            </ul>
+          </li>
+
           <li d="test" className={styles.li}>
             GÖR SCRUM-TEST
           </li>
