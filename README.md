@@ -4,6 +4,7 @@ Ett skolprojekt där vi skulle utveckla en hemsida/app om Scrum med hjälp av Sc
 
 - React
 - Git projects https://github.com/hannattaylor/Scrum-Project/projects/1 
+- Egendesignad UI, illustrationer från https://undraw.co/
 
 ## Screenshots from app
 ![Skärmavbild 2022-05-11 kl  16 21 59 (2)](https://user-images.githubusercontent.com/89576025/167875490-0fe71ca5-4122-4322-b33a-dfe13c0d3ec9.png)
